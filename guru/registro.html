@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Guru Sales</title>
+    <link rel="icon" href="imagenes/icono-app2.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #ffffff;">
+
+    <header class="bg-warning text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1><img class="logo" src="imagenes/logotipo.svg" alt="Logo"></h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Producto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="sesion.html">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card p-4 shadow-sm">
+                    <h1 class="text-center mb-4">Formulario de Registro</h1>
+                    <form action="conexion.php" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="identificacion" class="form-label">Identificación:</label>
+                            <input type="text" id="identificacion" name="identificacion" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombres:</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellidos:</label>
+                            <input type="text" id="apellido" name="apellido" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Número de Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-control" pattern="[0-9]{10}" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="genero" class="form-label">Género:</label>
+                            <select id="genero" name="genero" class="form-select" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo Electrónico:</label>
+                            <input type="email" id="correo" name="correo" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña:</label>
+                            <input type="password" id="contrasena" name="contrasena" class="form-control" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-warning w-100">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-warning text-white text-center p-3 mt-4">
+        <p>&copy; 2024 Guru Sales</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
